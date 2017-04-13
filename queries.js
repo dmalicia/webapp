@@ -1,12 +1,12 @@
 var promise = require('bluebird');
-
+var config = require('./config/config.json');
 var options = {
   // Initialization Options
   promiseLib: promise
 };
 
 var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://localhost:5432/catsordogs';
+var connectionString = `postgres://${config.production.psql.url}:5432/catsordogs`;
 var db = pgp(connectionString);
 
 function getAllNames(req, res, next) {
