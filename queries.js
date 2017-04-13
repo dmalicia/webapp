@@ -6,7 +6,7 @@ var options = {
 };
 
 var pgp = require('pg-promise')(options);
-var connectionString = `postgres://${config.production.psql.url}:5432/catsordogs`;
+var connectionString = `postgres://${config.production.psql.username}:${config.production.psql.password}@${config.production.psql.url}:5432/catsordogs`;
 var db = pgp(connectionString);
 
 function getAllNames(req, res, next) {
