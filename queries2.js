@@ -40,16 +40,16 @@ function getSinglePuppy(req, res, next) {
     });
 }
 
-function createPuppy(req, res, next) {
+function createName(req, res, next) {
   req.body.age = parseInt(req.body.age);
-  db.none('insert into pups(name, breed, age, sex)' +
-      'values(${name}, ${breed}, ${age}, ${sex})',
+  db.none('insert into cd(name, color, catsordogs)' +
+      'values(${name}, ${color}, ${catsordogs})',
     req.body)
     .then(function () {
       res.status(200)
         .json({
           status: 'success',
-          message: 'Inserted one puppy'
+          message: 'Inserted one name'
         });
     })
     .catch(function (err) {
@@ -57,15 +57,15 @@ function createPuppy(req, res, next) {
     });
 }
 
-function updatePuppy(req, res, next) {
-  db.none('update pups set name=$1, breed=$2, age=$3, sex=$4 where id=$5',
-    [req.body.name, req.body.breed, parseInt(req.body.age),
-      req.body.sex, parseInt(req.params.id)])
+function updateName(req, res, next) {
+  db.none('update cd set name=$1, color=$2, catsordogs=$3,
+    [req.body.name, req.body.color,
+      req.body.catsordogs)
     .then(function () {
       res.status(200)
         .json({
           status: 'success',
-          message: 'Updated puppy'
+          message: 'Updated name'
         });
     })
     .catch(function (err) {
@@ -73,9 +73,9 @@ function updatePuppy(req, res, next) {
     });
 }
 
-function removePuppy(req, res, next) {
-  var pupID = parseInt(req.params.id);
-  db.result('delete from pups where id = $1', pupID)
+function removeName(req, res, next) {
+  var nameID = parseString(req.params.name);
+  db.result('delete from cd where name = $1', nameID)
     .then(function (result) {
       /* jshint ignore:start */
       res.status(200)
