@@ -25,7 +25,7 @@ function getAllNames(req, res, next) {
 }
 
 function getSingleName(req, res, next) {
-  var nameID = parseString(req.params.id);
+  var nameID = parseString(req.params.name);
   db.one('select * from cd where name = $1', nameID)
     .then(function (data) {
       res.status(200)
