@@ -42,8 +42,8 @@ app.post('/', function(req, res){
   var spawn = require("child_process").spawn;
   var process = spawn('python',["webapp_api.py", username, color, catsdogs ]);
 
-  var html = 'Name: ' + username + 'color: ' + color + 'cats or dogs: '+  catsdogs + '.<br>' + '.<br>' +
-             '<a href="/">Check List APIs for https: dmalicia.com:8080/api/listnames</a>';
+  var html = 'Name: ' + username + ' color: ' + color + ' cats or dogs: '+  catsdogs + '.<br>' + '.<br>' +
+             '<a href="https://dmalicia.com:8080/api/listnames">Check APIs for https: dmalicia.com:8080/api/listnames</a>';
   res.send(html);
 });
 
