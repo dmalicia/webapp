@@ -12,7 +12,7 @@ router.delete('/api/removename/:id', db.removeName);
 // application -------------------------------------------------------------
 router.get('/', function (req, res) {
 
-    res.render('index', {title: 'node-postgres-promises'}); // load the single view file (angular will handle the page changes on the front-end)
+    res.render('index', {title: 'webapp'}); 
 });
 
 module.exports = router;
