@@ -11,7 +11,7 @@ URLHTTP                    Verb	     Action
 /api/listname/:name	    GET	     Return a SINGLE name
 /api/createname	            POST     Add a name /color/catsordogs
 /api/updatename/:name	    PUT	     Update a name
-/api/removename/:name	    DELETE  Delete a name
+/api/removename/:name	    DELETE   Delete a name
 ```
 
 
