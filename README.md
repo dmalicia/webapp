@@ -6,7 +6,7 @@ Simple webapp with api
 
 ```
 
-URLHTTP                   Verb	   Action
+URLHTTP                    Verb	   Action
 /api/listnames	            GET	     Return ALL names/color/catsordogs
 /api/listname/:name	    GET	     Return a SINGLE name
 /api/createname	            POST	   Add a name /color/catsordogs
