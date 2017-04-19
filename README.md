@@ -8,8 +8,8 @@ Simple webapp with api
 
 URL	HTTP                  Verb	   Action
 /api/listnames	            GET	     Return ALL names/color/catsordogs
-/api/listname/:name	      GET	     Return a SINGLE name
-/api/createname	          POST	   Add a name /color/catsordogs
+/api/listname/:name	    GET	     Return a SINGLE name
+/api/createname	           POST	   Add a name /color/catsordogs
 /api/updatename/:name	    PUT	     Update a name
 /api/removename/:name	    DELETE	 Delete a name
 ```
