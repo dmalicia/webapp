@@ -43,7 +43,7 @@ app.post('/', function(req, res){
   var process = spawn('python',["webapp_api.py", username, color, catsdogs ]);
 
   var html = 'Name: ' + username + ' color: ' + color + ' cats or dogs: '+  catsdogs + '.<br>' + '.<br>' +
-             '<a href="https://dmalicia.com:8080/api/listnames">Check APIs for https: dmalicia.com:8080/api/listnames</a>';
+             'Check your entry in the API : https: dmalicia.com:8080/api/listnames';
   res.send(html);
 });
 
