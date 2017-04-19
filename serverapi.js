@@ -18,13 +18,16 @@ app.get('/', function(req, res){
                '<br>' +
                '<br>' +
                'Enter your name:' +
-               '<input type="text" name="name" placeholder="" />' +
+               '<input type="text" name="name" placeholder="" />' + ' ' +
+               '<br>' +
                '<br>' +
                'Enter your Color:' +
-               '<input type="text" name="color" placeholder="" />' +
+               '<input type="text" name="color" placeholder="" />' + ' ' +
+               '<br>' +
                '<br>' +
                'Cats or Dogs:' +
-               '<input type="text" name="catsdogs" placeholder="" />' +
+               '<input type="text" name="catsdogs" placeholder="" />' + ' ' +
+               '<br>' +
                '<br>' +
                '<br>' +
                '<button type="submit">Submit</button>' +
@@ -39,8 +42,8 @@ app.post('/', function(req, res){
   var spawn = require("child_process").spawn;
   var process = spawn('python',["webapp_api.py", username, color, catsdogs ]);
 
-  var html = 'Hello: ' + username + color + catsdogs + '.<br>' +
-             '<a href="/">Try again.</a>';
+  var html = 'Name: ' + username + 'color: ' + color + 'cats or dogs: '+  catsdogs + '.<br>' + '.<br>' +
+             '<a href="/">Check List APIs for https: dmalicia.com:8080/api/listnames</a>';
   res.send(html);
 });
 
